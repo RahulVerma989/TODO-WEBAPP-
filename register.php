@@ -99,7 +99,7 @@ else
      $headers .= "Reply-To: some email id \r\n";
      $headers .= "MIME-VERSION: 1.0 \r\n";
      $headers .= "Content-Type: text/html; charset=UTF-8 \r\n";
-     header('location:thankyou.php'); //after clicking on register user will be taken to thankyou for registering page to tell that an email has been sent to his/her email id.
+     //header('location:thankyou.php'); //after clicking on register user will be taken to thankyou for registering page to tell that an email has been sent to his/her email id.
      if(mail($to,$subject,$message,$headers))
      {$success = "A verification mail has been sent on your mail id.";}
      else
