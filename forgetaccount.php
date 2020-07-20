@@ -45,10 +45,10 @@ if(isset($_POST['submit']))
     $verify = $data_from_query['verifykey'];
 
     $to = $email;
-    $subject = "RSNT:Reset Password";
+    $subject = "TODO APP:Reset Password";
     $message = "<html><body><p style='text-align:justify;'>Hi $user!<br/>Please click the bellow button to reset password of your account.<br/><a style='text-decoration:none; color:white; border:1px solid #037ef3; overflow:hidden; padding:5px 10px; border-radius:5px; display:inline-block;
     position:relative; margin:20px auto; background-color:#037ef3;' href='http://192.168.1.3/Html%20Practice/login%20and%20register%20page/resetpass.php?key=$verify' target='_top'>Reset your password</a></p></body></html>";
-    $headers = "From: RSNT GROUP. \r\n";
+    $headers = "From:TODO APP. \r\n";
     $headers .= "Reply-To: some email id \r\n";
     $headers .= "MIME-VERSION: 1.0 \r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8 \r\n";
