@@ -47,7 +47,7 @@ if(isset($_POST['submit']))
     $to = $email;
     $subject = "RSNT:Reset Password";
     $message = "<html><body><p style='text-align:justify;'>Hi $user!<br/>Please click the bellow button to reset password of your account.<br/><a style='text-decoration:none; color:white; border:1px solid #037ef3; overflow:hidden; padding:5px 10px; border-radius:5px; display:inline-block;
-    position:relative; margin:20px auto; background-color:#037ef3;' href='http://192.168.0.101/Html%20Practice/login%20and%20register%20page/resetpass.php?key=$verify' target='_top'>Reset your password</a></p></body></html>";
+    position:relative; margin:20px auto; background-color:#037ef3;' href='http://192.168.1.3/Html%20Practice/login%20and%20register%20page/resetpass.php?key=$verify' target='_top'>Reset your password</a></p></body></html>";
     $headers = "From: RSNT GROUP. \r\n";
     $headers .= "Reply-To: some email id \r\n";
     $headers .= "MIME-VERSION: 1.0 \r\n";
@@ -76,7 +76,7 @@ if(isset($success))  //display user image and user name if email found in databa
 {
     echo "<div class='user_preview_box'>
             <div class='user_image'>
-            <img src='http://192.168.0.101/Html%20Practice/login%20and%20register%20page/user_images/$userface'> 
+            <img src='http://192.168.1.3/Html%20Practice/login%20and%20register%20page/user_images/$userface'> 
             </div>
             <p>$user</p>
           </div>";
