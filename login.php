@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
    
 
   $result = $mysqli->query("SELECT username,password,verified FROM registrationdetails WHERE (username ='$user' AND verified ='1') ");
-  echo $result->num_rows;
+  //echo $result->num_rows;
   
  if($result->num_rows == 1)// && $pass_verify)
  { // if username found and account is verified 
