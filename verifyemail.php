@@ -7,9 +7,10 @@ if(isset($_GET['verify']))
   $mysqli = NEW MySQLi('localhost','root','','register'); 
   $result = $mysqli->query("SELECT verifykey,verified,username FROM registrationdetails WHERE verified=0 AND verifykey='$verify'");
   $data_from_query = mysqli_fetch_assoc($result);
-  $user = $data_from_query['username'];
   if($result->num_rows == 1)
-  {  //velidate the email
+  { 
+    $user = $data_from_query['username']; 
+     //validate the email
     $update =$mysqli->query("UPDATE registrationdetails SET verified = 1 WHERE verifykey ='$verify' LIMIT 1");
     if($update)
     {      $result = $mysqli->query("CREATE DATABASE IF NOT EXISTS userstodolist");//create user database for todo list after verify 
@@ -26,7 +27,8 @@ if(isset($_GET['verify']))
   }
   else
   {
-      echo "<p style='width:80%; margin:30px auto; text-align:center; position:relative;'>This account is invalid or already verified.</p>";
+      echo "<p style='width:80%; margin:30px auto; text-align:center; position:relative;'>This account is invalid or already verified.<br/><a style='text-decoration:none; color:white; border:1px solid #037ef3; overflow:hidden; padding:5px 10px; border-radius:5px; display:inline-block;
+            position:relative; margin:20px auto; background-color:#037ef3; ' href='login.php' target='_TOP'>Login</a></p>";
   }
 }
 else
