@@ -8,7 +8,15 @@ if(isset($_SESSION['user'])) //getback to home page when user try to go back to 
 {
     header('location:home.php');
 }
+//connect to data base (server,username,password,db name)
+$mysqli = NEW MySQLi('localhost','root','','');
 
+if($mysqli->query("CREATE DATABASE IF NOT EXISTS register"))
+{
+  $mysqli->select_db("register"); //selecting the db
+  $result = $mysqli->query("CREATE TABLE registrationdetails(id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL,email VARCHAR(255) NOT NULL,password VARCHAR(255) NOT NULL,cpassword VARCHAR(255) NOT NULL,verifykey VARCHAR(255) NOT NULL,verified INT(1) DEFAULT 0,userface VARCHAR(255) NOT NULL DEFAULT 'default_user.png',createdate datetime(6) NOT NULL)");
+  $result = $mysqli->query("CREATE TABLE logindetails(id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL,LastTime datetime(6) NOT NULL)");
+}
 ?>
 <!DOCTYPE HTML>
 
