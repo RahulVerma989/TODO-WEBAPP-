@@ -53,6 +53,7 @@ if(isset($_POST['submit']))
     $success = "Success! Logging you in.." ;
     
     //date and time at the time of registration
+    date_default_timezone_set("Asia/Kolkata");
     $date = date("y-m-d h:i:s");// day-month-year hour:minute:seconds
    
     $previouslogin = $mysqli->query("SELECT username FROM logindetails WHERE username='$user'");   
