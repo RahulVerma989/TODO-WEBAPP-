@@ -15,5 +15,5 @@ To run this web application on XAMPP local server just download the zip file and
 them in a new folder (name it anything like "previous files"). After starting Apache and MySQL from xampp control panel just type localhost in your web browser.
 If opening in another conputer or mobile devices then make sure they all are connected to the same network.
 
-
+Change the timezone to the timezone in which you are living to store information correctly in database. Default timezone in TODO APP is Asia/Kolkata. 
 
